@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort  # Change to LoadBalancer for external access, or NodePort for port mapping
+  selector:
+    app: nginx
+  ports:
+  - port: 80  # Port exposed by the service
+    targetPort: 80  # Port on the container to which requests will be forwarded
