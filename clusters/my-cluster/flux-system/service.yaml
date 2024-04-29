@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
+  namespace: flux-system
 spec:
   type: NodePort  # Change to LoadBalancer for external access, or NodePort for port mapping
   selector:
